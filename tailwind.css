@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Serif:wght@200;400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* a {
+    @apply transition duration-150 ease-in text-gray focus:outline-none hover:text-green hover:translate-y-1 hover:tracking-wider focus:text-green focus:translate-y-1 focus:tracking-wider active:text-green active:translate-y-1 active:tracking-wider;
+  } */
+  i {
+    @apply transition duration-150 ease-in text-gray hover:text-green;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-3 border rounded 2xl:px-8 2xl:py-4 text-green border-green hover:bg-green/10 focus:bg-green/10 active:bg-green/10;
+  }
+}
