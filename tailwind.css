@@ -13,6 +13,9 @@
 }
 
 @layer components {
+  .cst-container {
+    @apply container md:max-w-2xl lg:max-w-3xl xl:max-w-5xl mx-auto;
+  }
   .btn {
     @apply px-4 py-3 border rounded 2xl:px-8 2xl:py-4 text-green border-green hover:bg-green/10 focus:bg-green/10 active:bg-green/10;
   }
