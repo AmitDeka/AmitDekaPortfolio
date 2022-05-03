@@ -37,9 +37,9 @@
 </head>
 
 <body class="antialiased scroll-smooth bg-navy font-IBMplexSans">
-  <header class="sticky top-0 w-full px-6 shadow-lg shadow-navy-shadow bg-navy">
+  <header class="sticky top-0 w-full px-6 shadow-lg shadow-navy-shadow bg-navy z-[75]">
     <div class="container mx-auto">
-      <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
+      <nav class="relative  h-24 select-none" x-data="{ showMenu: false }">
         <div
           class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium md:overflow-visible lg:justify-center sm:px-4 md:px-2">
           <div class="flex items-center justify-start w-1/4 h-full pr-4">
@@ -49,7 +49,7 @@
           </div>
           <div
             class="top-0 left-0 items-start hidden w-full h-full text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
-            :class="{'flex fixed animate__animated animate__fadeInDown': showMenu, 'hidden': !showMenu }">
+            :class="{'flex fixed animate__animated animate__fadeInDown ': showMenu, 'hidden': !showMenu }">
             <div
               class="flex-col w-full h-auto overflow-hidden rounded-lg bg-navyL md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
               <a href="#_" class="inline-flex items-center w-auto h-24 px-6 lg:h-16 md:hidden">
@@ -82,12 +82,12 @@
           </div>
           <div @click="showMenu = !showMenu"
             class="absolute right-0 flex flex-col items-center justify-center w-10 h-10 rounded-full cursor-pointer bg-navyL md:hidden hover:bg-gray-100">
-            <svg class="w-6 h-6 text-green" x-show="!showMenu" fill="none" stroke-linecap="round"
+            <svg class="w-6 h-6 text-green z-[75]" x-show="!showMenu" fill="none" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak="">
               <path d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
-            <svg class="w-6 h-6 text-green" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg" x-cloak="">
+            <svg class="w-6 h-6 text-green z-[99]" x-show="showMenu" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" x-cloak="">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
@@ -97,26 +97,99 @@
   </header>
 
   <main>
+    <div class="hidden lg:block fixed bottom-[25vh] left-[5%] antialiased">
+      <ul class="">
+        <li class="mb-4">
+          <a href="https://github.com/AmitDeka" target="_blank"
+            class="text-gray hover:text-green transition-all duration-200 ease-in hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-github">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            <span class="sr-only">github</span>
+          </a>
+        </li>
+        <li class="mb-4">
+          <a href="https://www.linkedin.com/in/amit-deka/" target="_blank"
+            class="text-gray hover:text-green transition-all duration-200 ease-in hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-linkedin">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span class="sr-only">linkedin</span>
+          </a>
+        </li>
+        <li class="mb-4">
+          <a href="https://www.facebook.com/amit.deka.official/" target="_blank"
+            class="text-gray hover:text-green transition-all duration-200 ease-in hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-facebook">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            <span class="sr-only">facebook</span>
+          </a>
+        </li>
+        <li class="mb-4">
+          <a href="https://www.instagram.com/1.frustrated.engineer/" target="_blank"
+            class="text-gray hover:text-green transition-all duration-200 ease-in hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-instagram">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span class="sr-only">instagram</span>
+          </a>
+        </li>
+        <li class="mb-4">
+          <a href="https://twitter.com/AmitDeka10" target="_blank"
+            class="text-gray hover:text-green transition-all duration-200 ease-in hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-twitter">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+              </path>
+            </svg>
+            <span class="sr-only">twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="hidden lg:block fixed bottom-[32vh] right-[5%] antialiased">
+      <div class=" rotate-90 ">
+        <a class="text-gray hover:text-green font-IBMplexSans tracking-wider"
+          href="mailto:amitdeka13@gmail.com">amitdeka13@gmail.com</a>
+      </div>
+    </div>
     <!-- hero  -->
-    <section class="w-full h-[calc(100vh-6rem)]">
+    <section class="w-full h-[calc(100vh-6rem)]" id="home">
       <div class="cst-container flex flex-col items-start h-full px-6 justify-center">
-        <p class="text-base 2xl:text-lg text-green">Hi, my name is</p>
-        <h1 class="text-3xl font-bold tracking-wider text-lightBlue 2xl:text-6xl font-IBMplexSerif">
+        <p class="text-base 2xl:text-lg text-green top_subtitle">Hi, my name is</p>
+        <h1 class="text-3xl font-bold tracking-wider text-lightBlue 2xl:text-7xl font-IBMplexSerif title">
           Amit Deka
         </h1>
-        <h1 class="text-3xl text-gray 2xl:text-6xl">
+        <h2 class="text-3xl text-gray 2xl:text-7xl subtitle">
           I build frontend for the web.
-        </h1>
-        <div class="w-full mt-2 2xl:w-3/5 2xl:mt-4">
-          <p class="text-gray 2xl:text-xl 2xl:leading-normal">
+        </h2>
+        <div class="w-full mt-2 2xl:w-3/5 2xl:mt-4 description">
+          <p class="text-gray 2xl:text-xl 2xl:leading-normal ">
             I’m a graduate in Information Technology specializing in building
             (and occasionally designing) better
             <span class="font-semibold text-green font-IBMplexSerif">frontend</span>
             experiences.
           </p>
         </div>
-        <div class="mt-6 2xl:mt-10">
-          <a download="Amit_Deka_Resume.pdf" href="./assets/Amit_Deka_Resume.pdf" class="btn">Check out my resume</a>
+        <div class="mt-6 2xl:mt-10 hero_btn_contact">
+          <a href="#contact" class="btn">Contact Me</a>
         </div>
       </div>
     </section>

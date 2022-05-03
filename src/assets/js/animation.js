@@ -40,4 +40,39 @@ gsap.from(".resume_btn", {
   y: "-50px",
   ease: Power1.easeInOut,
 });
+gsap.from(".top_subtitle", {
+  duration: 0.8,
+  delay: 1.2,
+  opacity: 0,
+  y: "25px",
+  ease: Power1.easeInOut,
+});
+gsap.from(".title", {
+  duration: 0.8,
+  delay: 1.2,
+  opacity: 0,
+  y: "25px",
+  ease: Power1.easeInOut,
+});
+gsap.from(".subtitle", {
+  duration: 0.8,
+  delay: 1.3,
+  opacity: 0,
+  y: "25px",
+  ease: Power1.easeInOut,
+});
+gsap.from(".description", {
+  duration: 0.8,
+  delay: 1.4,
+  opacity: 0,
+  y: "25px",
+  ease: Power1.easeInOut,
+});
+gsap.from(".hero_btn_contact", {
+  duration: 0.8,
+  delay: 1.5,
+  opacity: 0,
+  y: "25px",
+  ease: Power1.easeInOut,
+});
 gsap.registerPlugin(ScrollTrigger);
